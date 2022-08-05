@@ -20,8 +20,8 @@ spec:
     spec:
       containers:
       - name: pro
-        image: hands-on/product-service
-        imagePullPolicy: Never
+        image: computerphilosopher/hands-on-product-service
+        imagePullPolicy: Always
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: "docker"

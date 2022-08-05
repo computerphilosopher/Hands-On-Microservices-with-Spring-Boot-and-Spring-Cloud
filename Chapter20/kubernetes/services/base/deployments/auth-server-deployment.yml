@@ -16,12 +16,12 @@ spec:
         prometheus.io/path: "/actuator/prometheus"
       labels:
         app: auth-server
-        version: latest
+        version: Always
     spec:
       containers:
       - name: auth-server
-        image: hands-on/auth-server
-        imagePullPolicy: Never
+        image: computerphilosopher/hands-on-auth-server
+        imagePullPolicy: IfNotPresent
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: "docker"
